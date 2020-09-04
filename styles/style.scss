@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
 
 $fontLato: 'Lato', sans-serif;
-
+$fz: 2.7vw;
 
 body, html {
   font-family: $fontLato;
@@ -19,6 +19,7 @@ body, html {
   body.lock {
     overflow: hidden;
   }
+
 }
 
 
@@ -28,11 +29,11 @@ body, html {
   //===============Cards=================
 
   .cards {
-    margin: 7% 0 8% 0;
+    margin: 4% 0 8% 0;
     display: grid;
     grid-template-rows: 1fr;
     text-align: center;
-    padding: 0 10% 0 10%;
+    padding: 0 6% 0 6%;
 
     &__logo {
       img {
@@ -43,10 +44,10 @@ body, html {
 
     &__title {
       font-family: $fontLato;
-      font-size: 1.4vw;
+      font-size: 1.1vw;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 3.6px;
+      letter-spacing: 0.5vw;
       margin: 5% 0 5% 0;
       color: #353738;
     }
@@ -54,7 +55,7 @@ body, html {
     &__text {
       color: #848789;
       font-family: $fontLato;
-      font-size: 1.2vw;
+      font-size: 1.36vw;
       font-weight: 400;
       line-height: 1.4;
       margin: 0 0 4% 0;
@@ -73,8 +74,15 @@ body, html {
     }
 
     @media (max-width: 768px) {
+
+      &__title {
+        font-size: $fz;
+        //letter-spacing: 4px;
+      }
+
       &__text {
         text-align: center;
+        font-size: $fz;
 
       }
     }
@@ -198,7 +206,7 @@ body, html {
         display: block;
         position: relative;
         top: 2%;
-        left: 95%;
+        left: 90%;
         width: 30px;
         height: 20px;
 
@@ -267,6 +275,21 @@ body, html {
         font-size: 1.4vw;
         font-weight: 400;
         line-height: 1.6;
+      }
+      @media (max-width: 768px) {
+
+        &__title {
+
+          font-size: $fz;
+
+        }
+
+        &__text {
+          //color: #848789;
+          font-size: $fz;
+          //font-weight: 400;
+          //line-height: 1.6;
+        }
       }
     }
 
@@ -450,11 +473,6 @@ body, html {
         }
       }
 
-      &__card {
-        //margin: 10% 0 3% 0;
-
-      }
-
       &__logo__style {
         margin: 2% 0 1% 0;
 
@@ -508,6 +526,16 @@ body, html {
         font-weight: 400;
         line-height: 1.6;
       }
+@media (max-width: 768px) {
+  &__title {
+    font-size: $fz;
+  }
+
+  &__text {
+    font-size: $fz;
+  }
+}
+
     }
 
     //  =================================== store ============================================
@@ -578,9 +606,10 @@ body, html {
         height: 100%;
 
         &:hover {
-          background-color: #64c29e;
+          background: #64c29e;
           opacity: 0.6;
           z-index: 2;
+          transition: background 300ms;
         }
 
         img {
@@ -602,23 +631,26 @@ body, html {
         display: grid;
         justify-content: center;
         align-items: center;
-        height: 10vw;
+        height: 16vw;
         grid-area: discover;
         background-color: #282f35;
 
       }
 
       &__btn {
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        padding: 1vw 1.5vw;
-
-        a {
+          align-items: center;
+          border: 1px solid rgba(255, 255, 255, 0.5);
           font-size: 1.6vw;
-          text-align: center;
           font-weight: 700;
-
+          padding: 1.3vw 1.2vw;
           letter-spacing: 0.2vw;
           color: #ffffff;
+      }
+      @media (max-width: 768px) {
+
+        &__btn {
+
+          font-size: 2.3vw;
 
         }
       }
@@ -632,7 +664,7 @@ body, html {
       align-items: center;
       text-align: center;
 
-      margin: 7% 0;
+      margin: 8% 0;
 
       &__logo {
         text-align: center;
@@ -674,7 +706,11 @@ body, html {
         color: #ffffff;
       }
 
-
+      @media (max-width: 768px) {
+        &__title {
+          font-size: $fz;
+        }
+      }
     }
 
     //  ==========================================
@@ -726,24 +762,26 @@ body, html {
       }
     }
 
+@media (max-width: 768px) {
 
+  &__social {
+    img {
+      width: 4vw;
+      margin: 0 2% 0 2%;
+    }
+  }
+  &__address {
+    font-size: $fz;
+    line-height: 3.3vw;
+  }
+  &__name {
+    img {
+      width: 15vw;
+    }
+  }
+}
   }
 
-  //  @media (max-width: 378px) {
-  //
-  //    .header {
-  //      background: url("../assets/header/400.png");
-  //      background-position: center center;
-  //      background-repeat: no-repeat;
-  //      background-size: cover;
-  //      height: 100%;
-  //
-  //      &__title {
-  //        margin: 20% 0 0 0;
-  //      }
-  //
-  //    }
-  //
-  //  }
-  //
+
+
 }
